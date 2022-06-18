@@ -3,8 +3,9 @@ import {
   BrowserRouter, Navigate, NavLink, Route, Routes,
 } from 'react-router-dom';
 
-import logo from '../logo.svg';
 import { routes } from './routes';
+
+import logo from '../logo.svg';
 
 export const Navigation = () => (
   <Suspense fallback={<span>Loading...</span>}>

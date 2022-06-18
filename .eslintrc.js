@@ -30,6 +30,7 @@ module.exports = {
     'no-return-assign': 'off',
     'no-param-reassign': 'off',
     'no-trailing-spaces': ['warn'],
+    'no-unused-vars': ['warn'],
     indent: [
       'warn',
       2,
