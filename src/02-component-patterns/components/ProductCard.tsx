@@ -1,20 +1,28 @@
 import { useProduct } from '../hooks/useProduct';
 
 import styles from '../styles/styles.module.css';
-// import noImage from '../assets/no-image.jpg';
+import noImage from '../assets/no-image.jpg';
 
-export const ProductCard = () => {
+interface Product {
+    id: string;
+    name: string;
+    img?: string;
+}
+interface Props {
+    product: Product;
+}
+
+export const ProductCard = ({ product }: Props) => {
   const { counter, increaseBy } = useProduct();
 
   return (
     <div className={styles.productCard}>
       <img
-        src="./coffee-mug.png"
-        alt="coffee mug"
+        src={product.img || noImage}
+        alt={product.name}
         className={styles.productImg}
       />
-      {/* <img src={noImage} alt="no img" className={styles.productImg} /> */}
-      <span className={styles.productDescription}>Coffee mug</span>
+      <span className={styles.productDescription}>{ product.name }</span>
 
       <div className={styles.buttonsContainer}>
         <button
