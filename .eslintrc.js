@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'airbnb-typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -14,6 +15,7 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   plugins: [
     'react',
@@ -30,6 +32,7 @@ module.exports = {
     'no-return-assign': 'off',
     'no-param-reassign': 'off',
     'no-trailing-spaces': ['warn'],
+    'no-unused-vars': ['warn'],
     indent: [
       'warn',
       2,
