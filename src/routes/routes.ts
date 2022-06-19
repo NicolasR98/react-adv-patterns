@@ -5,10 +5,10 @@ type JSXComponent = () => JSX.Element;
 
 // REACT-ROUTER-DOM Route interface
 interface Route {
-    to: string;
-    path: string;
-    name: string;
-    Component: LazyExoticComponent<JSXComponent> | JSXComponent;
+  to: string;
+  path: string;
+  name: string;
+  Component: LazyExoticComponent<JSXComponent> | JSXComponent;
 }
 
 const LazyComponent1 = lazy(() => import(/* webpackChunkName: "LazyView1" */'../01-lazyload/views/LazyView1'));

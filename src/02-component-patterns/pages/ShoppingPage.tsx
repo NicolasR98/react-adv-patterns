@@ -1,6 +1,7 @@
-import { ProductCard } from '../components/ProductCard';
-
 import styles from '../styles/styles.module.css';
+import {
+  ProductCard, ProductImage, ProductTitle, ProductButtons,
+} from '../components';
 
 const products = [
   {
@@ -24,7 +25,24 @@ export const ShoppingPage = () => (
         && products.length > 0
         && (
           products.map((product) => (
-            <ProductCard product={product} key={product.id} />
+            <ProductCard product={product} key={product.id}>
+              <ProductCard.Image />
+              <ProductCard.Title />
+              <ProductCard.Buttons />
+            </ProductCard>
+          ))
+        )
+      }
+      {
+        products
+        && products.length > 0
+        && (
+          products.map((product) => (
+            <ProductCard product={product} key={product.id}>
+              <ProductImage />
+              <ProductTitle />
+              <ProductButtons />
+            </ProductCard>
           ))
         )
       }
