@@ -38,5 +38,6 @@ module.exports = {
       2,
       { SwitchCase: 1 },
     ],
+    'import/no-cycle': 'off'
   },
 };
