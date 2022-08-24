@@ -38,6 +38,7 @@ module.exports = {
       2,
       { SwitchCase: 1 },
     ],
-    'import/no-cycle': 'off'
+    'import/no-cycle': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off'
   },
 };
